@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'id'
+        sh '''id
+ls -all'''
       }
     }
     stage('build') {
