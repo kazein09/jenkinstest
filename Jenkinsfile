@@ -15,7 +15,10 @@ pipeline {
       steps {
         parallel(
           "build": {
-            sh 'cat file1'
+            sh '''cat << EOF > file
+cd "$HOME"
+echo "$PWD" # echo the current path
+EOF'''
             
           },
           "testbuild": {
@@ -29,7 +32,10 @@ pipeline {
       steps {
         parallel(
           "build 2": {
-            sh 'cat file2'
+            sh '''cat << EOF > file2
+cd "$HOME"
+echo "$PWD" # echo the current path
+EOF'''
             
           },
           "testbuild2": {
