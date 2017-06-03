@@ -8,8 +8,17 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh '''id
+        parallel(
+          "test": {
+            sh '''id
 ls -all'''
+            
+          },
+          "": {
+            sh 'exit 1'
+            
+          }
+        )
       }
     }
     stage('build') {
