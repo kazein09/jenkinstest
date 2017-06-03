@@ -8,20 +8,18 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'echo "passed"'
+        sh 'touch /opt/myfile'
       }
     }
     stage('build') {
       steps {
         parallel(
           "build": {
-            sh '''echo "starting"
-
-go get -d -v github.com/kazein09/demo'''
+            sh 'touch /opt/myfile2'
             
           },
           "testbuild": {
-            sh 'echo "lyalya"'
+            sh 'ls /opt/ -all'
             
           }
         )
