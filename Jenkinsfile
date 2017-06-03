@@ -8,7 +8,23 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'go get -d -v github.com/kazein09/demo'
+        sh 'echo "passed"'
+      }
+    }
+    stage('build') {
+      steps {
+        parallel(
+          "build": {
+            sh '''echo "starting"
+
+go get -d -v github.com/kazein09/demo'''
+            
+          },
+          "testbuild": {
+            sh 'echo "lyalya"'
+            
+          }
+        )
       }
     }
   }
