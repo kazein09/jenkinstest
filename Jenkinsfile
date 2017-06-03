@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'go get github.com/kazein09/demo'
+        sh 'go get -d -v github.com/kazein09/demo'
       }
     }
   }
