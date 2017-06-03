@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'touch /opt/myfile'
+        sh 'id'
       }
     }
     stage('build') {
