@@ -18,7 +18,8 @@ pipeline {
             sh '''cat << EOF > file
 cd "$HOME"
 echo "$PWD" # echo the current path
-EOF'''
+EOF
+ls -all'''
             
           },
           "testbuild": {
@@ -35,7 +36,8 @@ EOF'''
             sh '''cat << EOF > file2
 cd "$HOME"
 echo "$PWD" # echo the current path
-EOF'''
+EOF
+ls -all'''
             
           },
           "testbuild2": {
