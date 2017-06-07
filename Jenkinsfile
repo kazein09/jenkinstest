@@ -14,8 +14,8 @@ pipeline {
 ls -all'''
             
           },
-          "": {
-            sh 'exit 1'
+          "error": {
+            sh 'exit 0'
             
           }
         )
