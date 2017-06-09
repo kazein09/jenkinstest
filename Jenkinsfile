@@ -37,7 +37,7 @@ ls -all'''
             
           },
           "new": {
-            sh 'exit 0'
+            sh 'exit 1'
             
           }
         )
