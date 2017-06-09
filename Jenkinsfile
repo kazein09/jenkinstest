@@ -57,5 +57,10 @@ ls -all'''
         )
       }
     }
+    stage('Test-Nuriel') {
+      steps {
+        sh 'echo "something"'
+      }
+    }
   }
 }
