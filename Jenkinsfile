@@ -35,6 +35,10 @@ ls -all'''
           "testbuild": {
             sh 'ls -all'
             
+          },
+          "new": {
+            sh 'exit 0'
+            
           }
         )
       }
