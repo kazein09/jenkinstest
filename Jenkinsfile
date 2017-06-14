@@ -62,7 +62,21 @@ ls -all'''
     }
     stage('Test-Nuriel') {
       steps {
-        sh 'go get github.com/tools/godep'
+        sh 'go run ./main.go'
+      }
+    }
+    stage('curl') {
+      steps {
+        parallel(
+          "curl": {
+            sh '/bin/curl localhost:3000'
+            
+          },
+          "curl2": {
+            sh '/bin/curl localhost:80'
+            
+          }
+        )
       }
     }
   }
