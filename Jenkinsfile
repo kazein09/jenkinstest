@@ -62,7 +62,7 @@ ls -all'''
     }
     stage('Test-Nuriel') {
       steps {
-        sh 'echo "something"'
+        sh 'go get github.com/tools/godep'
       }
     }
   }
