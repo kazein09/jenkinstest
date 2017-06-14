@@ -10,12 +10,11 @@ pipeline {
       steps {
         parallel(
           "test": {
-            sh '''id
-ls -all'''
+            sh 'go build ./main.go'
             
           },
           "error": {
-            sh 'exit 0'
+            sh 'ls -all'
             
           }
         )
