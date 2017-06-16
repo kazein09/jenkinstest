@@ -69,11 +69,11 @@ ls -all'''
       steps {
         parallel(
           "curl": {
-            sh '/bin/curl localhost:3000'
+            sh 'exit 0'
             
           },
           "curl2": {
-            sh '/bin/curl localhost:80'
+            sh 'exit 0'
             
           }
         )
