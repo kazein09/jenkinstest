@@ -46,11 +46,7 @@ ls -all'''
       steps {
         parallel(
           "build 2": {
-            sh '''cat << EOF > file2
-cd "$HOME"
-echo "$PWD" # echo the current path
-EOF
-ls -all'''
+            sh 'exit 1'
             
           },
           "testbuild2": {
