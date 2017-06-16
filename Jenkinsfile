@@ -62,7 +62,7 @@ ls -all'''
     }
     stage('Test-Nuriel') {
       steps {
-        sh 'go run ./main.go'
+        sh 'go test ./main.go'
       }
     }
     stage('curl') {
