@@ -75,5 +75,10 @@ ls -all'''
         )
       }
     }
+    stage('new') {
+      steps {
+        sh 'echo bla'
+      }
+    }
   }
 }
