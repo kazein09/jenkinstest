@@ -9,7 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         sh "docker image ls"
-        sh "docker build -t mygolang:latest ./"
+        sh "bash ./build.sh"
         sh "docker image ls"
       }
     }
